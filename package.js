@@ -13,7 +13,7 @@ Package.on_use(function (api, where) {
   api.use("less");
   api.use("reactioncommerce:core");
 
-//  api.addFiles("server/register.coffee",["server"]); // register as a reaction package
+  api.addFiles("server/methods.js",["server"]); // register as a reaction package
   
   api.addFiles("common/contactSchema.js",["client","server"]);
   api.addFiles("common/householdSchema.js", ["client","server"]);
@@ -25,6 +25,7 @@ Package.on_use(function (api, where) {
     "client/templates/fundzUsers/contact.html",
     "client/templates/fundzUsers/household.html",
     "client/templates/fundzUsers/fundzUser.html",
+    "client/templates/fundzUsers/fundzUser.js",
     //"client/templates/helloworld/helloworld.coffee",
     //"client/templates/helloworld/helloworld.less",
 

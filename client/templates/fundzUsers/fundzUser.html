@@ -1,3 +1,3 @@
 <template name="fundzUser">
-<h1>Create new user here</h1>
+{{> quickForm schema=contactSchema id="insertMembershipType" type="method" meteormethod="insertNeoUser" omitFields="Mongo_id"}}
 </template>
