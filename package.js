@@ -18,6 +18,7 @@ Package.on_use(function (api, where) {
   
   api.addFiles("common/contactSchema.js",["client","server"]);
   api.addFiles("common/householdSchema.js", ["client","server"]);
+  api.addFiles("common/membershipSchema.js", ["client", "server"]);
   api.addFiles("common/userHooks.js",["client"]);
   api.addFiles("common/routing.coffee",["client","server"]); // common routing
   api.addFiles("common/router.js",["client","server"]); // common routing
@@ -28,6 +29,7 @@ Package.on_use(function (api, where) {
     "client/templates/fundzUsers/fundzUser.html",
     "client/templates/fundzUsers/fundzUser.js",
     "client/templates/fundzUsers/fundzMembership.html",
+    "client/templates/fundzUsers/fundzMembership.js",
     //"client/templates/helloworld/helloworld.coffee",
     //"client/templates/helloworld/helloworld.less",
 
