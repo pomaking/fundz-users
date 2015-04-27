@@ -1,3 +1,13 @@
+Accounts.onCreateUser(function(options, user){
+	if(options.profile){
+		user.profile = options.profile;
+	}
+	else {
+		user.profile = {};
+	}
+	return user;
+})
+
 /*Meteor.startup(function () {
 	if(!MembershipTypes.findOne({label: "Individual"})){
 		addDefaultMembershipTypes();		

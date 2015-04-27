@@ -26,6 +26,7 @@ Package.on_use(function (api, where) {
     "client/templates/fundzUsers/household.html",
     "client/templates/fundzUsers/fundzUser.html",
     "client/templates/fundzUsers/fundzUser.js",
+    "client/templates/fundzUsers/fundzMembership.html",
     //"client/templates/helloworld/helloworld.coffee",
     //"client/templates/helloworld/helloworld.less",
 
