@@ -5,7 +5,8 @@ ContactSchema = new SimpleSchema({
 		type: String,
 		autoValue: function(){
 			return Meteor.userId();
-		}
+		},
+		optional: true
 	},
 	First_name: {
 		type: String,

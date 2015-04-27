@@ -18,7 +18,9 @@ Package.on_use(function (api, where) {
   
   api.addFiles("common/contactSchema.js",["client","server"]);
   api.addFiles("common/householdSchema.js", ["client","server"]);
-  api.addFiles("common/membershipSchema.js", ["client", "server"]);
+  //api.addFiles("common/membershipSchema.js", ["client", "server"]);
+  api.addFiles("common/companySchema.js", ["client", "server"]);
+  api.addFiles("common/schoolSchema.js", ["client", "server"]);
   api.addFiles("common/userHooks.js",["client"]);
   api.addFiles("common/routing.coffee",["client","server"]); // common routing
   api.addFiles("common/router.js",["client","server"]); // common routing

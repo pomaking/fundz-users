@@ -1,8 +1,12 @@
-FamilyMembershipSchemaPart = new SimpleSchema({
-	membershipType: {
+HouseholdSchema = new SimpleSchema({
+	people: {
+		label: "People",
+		type: [String]
+	}
+	/*membershipType: {
 		label: "Membership Type",
 		type: String
-	},
+	},*//*
 	householdDetails: {
 		label: "Household Details",
 		type: Object
@@ -32,6 +36,6 @@ FamilyMembershipSchemaPart = new SimpleSchema({
 		label: "Parents",
 		type: [String],
 		optional: true
-	}
+	}*/
 });
-FamilyMembershipSchema = new SimpleSchema([FamilyMembershipSchemaPart, ReactionCore.Schemas.Product]);
+//FamilyMembershipSchema = new SimpleSchema([FamilyMembershipSchemaPart, ReactionCore.Schemas.Product]);

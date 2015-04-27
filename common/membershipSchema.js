@@ -1,7 +1,7 @@
 Memberships = Meteor.neo4j.collection('memberships');
 
-MembershipSchema = new SimpleSchema({
-	Membership_name: {
+/*
+Membership_name: {
 		type: String,
 		label: "Membership Name"
 	},
@@ -27,4 +27,4 @@ MembershipSchema = new SimpleSchema({
 		type: Boolean,
 		label: "Is Pro-Rated"
 	}
-})
+	*/
