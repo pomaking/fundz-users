@@ -1,3 +1,6 @@
+Contacts = Meteor.neo4j.collection('contacts');
+
+
 ContactSchema = new SimpleSchema({
 	Mongo_id: {
 		type: String,

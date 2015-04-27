@@ -12,6 +12,7 @@ Package.on_use(function (api, where) {
   api.use("coffeescript");
   api.use("less");
   api.use("reactioncommerce:core");
+  api.use("ostrio:neo4jreactivity");
 
   api.addFiles("server/methods.js",["server"]); // register as a reaction package
   
