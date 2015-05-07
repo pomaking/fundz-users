@@ -3,4 +3,4 @@ CompanySchema = new SimpleSchema({
 		type: String,
 		label: "Company"
 	}
-})
+});

@@ -1,11 +1,14 @@
-Meteor.methods({
-	insertNeoUser: function(obj){
+Meteor.neo4j.methods({
+	insertNeoUser: function(){
 		//extra object getting passed and causing an error to be thrown
-		ContactSchema.clean(obj);
-		/*Meteor.N4JDB.query('CREATE (a:Contact {First_name: {fName}})',{
-			_id: String.generate(),
-			fName: obj.First_name
-		})*/Meteor.users.update({_id: this.userId}, {$set: {"profile.neo4jId": true}})
-		check(obj, ContactSchema);
+		/*console.log(blah);
+		console.log(contactObj);
+		ContactSchema.clean(contactObj);*/
+		//console.log(Meteor.neo4j.query('MATCH (a:Contacts) RETURN a'))
+		//
+		//Meteor.users.update({_id: this.userId}, {$set: {"profile.neo4jId": true}})
+		//check(contactObj, ContactSchema);
+		//return 'MATCH (a:Contact) RETURN a';
+		return 'CREATE (a:Contact {Birthday: {Birthday}, Email: {Email}, First_name: {First_name}, Last_name: {Last_name}, Gender: {Gender}})';
 	}
 })

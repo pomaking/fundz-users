@@ -1,10 +1,12 @@
-Contacts = Meteor.neo4j.collection('contacts');
+this.Contacts = Contacts = Meteor.neo4j.collection('contacts');
 
 ContactSchema = new SimpleSchema({
 	Mongo_id: {
 		type: String,
-		autoValue: function(){
-			return Meteor.userId();
+		autoform: {
+			autoValue: function(){
+				return Meteor.userId();
+			}
 		},
 		optional: true
 	},

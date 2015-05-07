@@ -24,6 +24,9 @@ Package.on_use(function (api, where) {
   api.addFiles("common/userHooks.js",["client"]);
   api.addFiles("common/routing.coffee",["client","server"]); // common routing
   api.addFiles("common/router.js",["client","server"]); // common routing
+  api.addFiles("lib/String.js", ["client", "server"]);
+  api.addFiles("lib/Math.js", ["client", "server"]);
+  api.addFiles("lib/neo4j.js", ["client", "server"]);
 
   api.addFiles([
     "client/templates/fundzUsers/contact.html",
