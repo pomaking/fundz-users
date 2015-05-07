@@ -13,8 +13,10 @@ Package.on_use(function (api, where) {
   api.use("less");
   api.use("reactioncommerce:core");
   api.use("ostrio:neo4jreactivity");
+  api.use("matb33:collection-hooks");
 
   api.addFiles("server/methods.js",["server"]); // register as a reaction package
+  api.addFiles("server/publications.js",["server"]);
   
   api.addFiles("common/contactSchema.js",["client","server"]);
   api.addFiles("common/householdSchema.js", ["client","server"]);

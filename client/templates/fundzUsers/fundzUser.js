@@ -3,7 +3,13 @@ Template.fundzUser.helpers({
 })
 
 Tracker.autorun(function(){
+	//Subscriptions don't work yet?
   Meteor.neo4j.subscribe('contacts', null, 'a');
+  /*if(Meteor.userId()){
+	  Meteor.neo4j.call('getNeoUser', {userId: Meteor.userId()}, function(e, doc){
+	  	console.log(doc);
+	  })
+	}*/
 });
 
 AutoForm.hooks({

@@ -8,7 +8,13 @@ Meteor.neo4j.methods({
 		//
 		//Meteor.users.update({_id: this.userId}, {$set: {"profile.neo4jId": true}})
 		//check(contactObj, ContactSchema);
-		//return 'MATCH (a:Contact) RETURN a';
+		//
 		return 'CREATE (a:Contact {Birthday: {Birthday}, Email: {Email}, First_name: {First_name}, Last_name: {Last_name}, Gender: {Gender}})';
+	},
+	insertNewNeo: function(){
+		return 'CREATE (a:Contact {_id: {userId}})';
+	},
+	getNeoUser: function(){
+		return 'MATCH (a:Contact {_id: {userId}}) RETURN a';
 	}
 })
