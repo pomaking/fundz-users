@@ -12,9 +12,10 @@ Meteor.neo4j.methods({
 		return 'CREATE (a:Contact {Birthday: {Birthday}, Email: {Email}, First_name: {First_name}, Last_name: {Last_name}, Gender: {Gender}})';
 	},
 	insertNewNeo: function(){
-		return 'CREATE (a:Contact {_id: {userId}})';
+		return 'CREATE (a:Contact {_id: {userId}}) CREATE (b:Household) CREATE (a)-[:BELONGS_TO]->(b)';
+		//CREATE (b:Household) (a)-[BELONGS_TO]->(b)
 	},
 	getNeoUser: function(){
-		return 'MATCH (a:Contact {_id: {userId}}) RETURN a';
+		return 'MATCH (a:Contact {_id: {userId}})-[r:BELONGS_TO]-(h) RETURN a, r, h';
 	}
 })

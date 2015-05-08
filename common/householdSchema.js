@@ -1,33 +1,16 @@
+this.Households = Households = Meteor.neo4j.collection('households');
+/*
 HouseholdSchema = new SimpleSchema({
 	people: {
 		label: "People",
 		type: [String]
 	}
-});/*
+});
 	membershipType: {
 		label: "Membership Type",
 		type: String
 	},
-	householdDetails: {
-		label: "Household Details",
-		type: Object
-	},
-	"householdDetails.mailingAddress" : {
-		label: "Mailing Address",
-		type: String
-	},
-	"householdDetails.city" : {
-		label: "City",
-		type: String
-	},
-	"householdDetails.state" : {
-		label: "State",
-		type: String
-	},
-	"householdDetails.zip" : {
-		label: "Zip",
-		type: Number
-	},
+	
 	"householdDetails.children" : {
 		label: "Children",
 		type: [String],

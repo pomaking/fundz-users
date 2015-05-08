@@ -20,6 +20,7 @@ Package.on_use(function (api, where) {
   
   api.addFiles("common/contactSchema.js",["client","server"]);
   api.addFiles("common/householdSchema.js", ["client","server"]);
+  api.addFiles("common/addressNode.js", ["client", "server"]);
   //api.addFiles("common/membershipSchema.js", ["client", "server"]);
   api.addFiles("common/companySchema.js", ["client", "server"]);
   api.addFiles("common/schoolSchema.js", ["client", "server"]);
