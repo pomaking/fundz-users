@@ -6,4 +6,3 @@ Router.route("/fundzMembership", {
 	name: "fundzMembership",
 	controller: ShopController
 })
-

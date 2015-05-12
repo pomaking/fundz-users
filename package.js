@@ -12,9 +12,9 @@ Package.on_use(function (api, where) {
   api.use("coffeescript");
   api.use("less");
   api.use("reactioncommerce:core");
-  api.use("ostrio:neo4jreactivity");
   api.use("matb33:collection-hooks");
-
+  api.use("ostrio:neo4jdriver");
+  api.use("ostrio:neo4jreactivity");
   api.addFiles("server/methods.js",["server"]); // register as a reaction package
   api.addFiles("server/publications.js",["server"]);
   
@@ -38,11 +38,9 @@ Package.on_use(function (api, where) {
     "client/templates/fundzUsers/fundzUser.js",
     "client/templates/fundzUsers/fundzMembership.html",
     "client/templates/fundzUsers/fundzMembership.js",
-    //"client/templates/helloworld/helloworld.coffee",
-    //"client/templates/helloworld/helloworld.less",
-
     "client/templates/dashboard/widget/widget.html",
     "client/templates/dashboard/widget/widget.coffee",
-    "client/templates/dashboard/widget/widget.less"
+    "client/templates/dashboard/widget/widget.less",
+    "client/startup.js"
   ], ["client"]);
 });

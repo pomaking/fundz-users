@@ -14,7 +14,3 @@ Router.onBeforeAction(function(){
 		this.next();
 	}
 }, {except: ["fundzUser", "fundzMembership"]})
-
-ReactionCore.Collections.Cart.after.update(function(userId, doc, fieldNames, modifier, options){
-	Meteor.users.update({_id: userId}, {$set: {"profile.hasMembership": true}});
-});

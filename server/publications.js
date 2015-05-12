@@ -3,7 +3,12 @@
 });*/
 
 Meteor.neo4j.publish('contacts', function(){
-  return 'MATCH (a:Contact) return a';
+  return 'MATCH (a:Contact) RETURN a';
+  //-[r:BELONGS_TO]-(h:Household)-[l:LIVES_AT]-(b) RETURN a, r, h, l, b
+});
+
+Meteor.neo4j.publish('currentUser', function(){
+  return 'MATCH (a:Contact {_id: userId}) RETURN a';
   //-[r:BELONGS_TO]-(h:Household)-[l:LIVES_AT]-(b) RETURN a, r, h, l, b
 });
 
@@ -15,8 +20,7 @@ Meteor.users.after.insert(function (userId, doc){
 	/*else {
 		user.profile = {};
 	}*/
-	var query = 'CREATE (:Contact {_id:"' + doc._id + '"})';
-	Meteor.neo4j.query(query);
+	
 	//console.log(query);
 	//console.log(doc._id);
   //Meteor..call("insertNewNeo", {userId: doc._id});
