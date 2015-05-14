@@ -8,11 +8,11 @@ Tracker.autorun(function(){
  if(Meteor.userId()){
  	Meteor.neo4j.subscribe('contacts', {userId: Meteor.userId()}, 'a');
  }
-  /*if(Meteor.userId()){
+  if(Meteor.userId()){
 	  Meteor.neo4j.call('getNeoUser', {userId: Meteor.userId()}, function(e, doc){
 	  	console.log(doc);
 	  })
-	}*/
+	}
 });
 
 /*Accounts.onLogin(function(){
@@ -27,6 +27,7 @@ Tracker.autorun(function(){
 AutoForm.hooks({
 	insertContact: {
 		onSubmit: function(insertDoc, updateDoc, currentDoc){
+			insertDoc.userId = Meteor.userId();
 			console.log(insertDoc);
 			Meteor.neo4j.call('insertNeoUser', insertDoc, function(err, doc){
 				console.log(err, doc);

@@ -8,7 +8,7 @@ Meteor.neo4j.publish('contacts', function(){
 });
 
 Meteor.neo4j.publish('currentUser', function(){
-  return 'MATCH (a:Contact {_id: userId}) RETURN a';
+  return 'MATCH (a:Contact {_id: {userId}}) RETURN a';
   //-[r:BELONGS_TO]-(h:Household)-[l:LIVES_AT]-(b) RETURN a, r, h, l, b
 });
 
