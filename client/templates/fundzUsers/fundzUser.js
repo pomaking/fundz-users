@@ -29,9 +29,8 @@ AutoForm.hooks({
 		onSubmit: function(insertDoc, updateDoc, currentDoc){
 			insertDoc.userId = Meteor.userId();
 			console.log(insertDoc);
-			Meteor.neo4j.call('insertNeoUser', insertDoc, function(err, doc){
-				console.log(err, doc);
-			});
+			console.log(Meteor.userId())
+			Meteor.neo4j.call('insertNeoUser', {userId: Meteor.userId()});
 			return false;
 		}
 	}

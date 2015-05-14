@@ -9,7 +9,8 @@ Meteor.neo4j.methods({
 		//Meteor.users.update({_id: this.userId}, {$set: {"profile.neo4jId": true}})
 		//check(contactObj, ContactSchema);
 		//
-		return 'Create (a:Contact {_id: {userId}, Birthday: {Birthday}, Email: {Email}, First_name: {First_name}, Last_name: {Last_name}, Gender: {Gender}}) CREATE (b:Household) CREATE (a)-[:BELONGS_TO]->(b)';
+		return 'CREATE (a:Contact {_id: {userId}})';
+		// {_id: {userId}, Birthday: {Birthday}, Email: {Email}, First_name: {First_name}, Last_name: {Last_name}, Gender: {Gender}}) CREATE (b:Household) CREATE (a)-[:BELONGS_TO]->(b)
 		//return 'Create (a:Contact {_id: {userId}}, SET a += {Birtday: {Birthday}, Email: {Email}, First_name: {First_name}, Last_name: {Last_name}, Gender: {Gender}})';
 	},/*,
 	insertNewNeo: function(){
